@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.abeldevelop.architecture</groupId>
+	<artifactId>parent-pom</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>Parent POM</name>
+	<description>Parent POM for abeldevelop Architecture</description>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<!--////////////////////////////// -->
+		<!-- START ABELDEVELOP PROPERTIES -->
+		<!--////////////////////////////// -->
+
+		<parent-pom.version>0.0.2-SNAPSHOT</parent-pom.version>
+
+		<!-- Starters -->
+
+		<!-- Libraries -->
+
+		<!--//////////////////////////// -->
+		<!-- END ABELDEVELOP PROPERTIES -->
+		<!--//////////////////////////// -->
+		<java.version>1.8</java.version>
+
+		<!-- SPRING BOOT PROPERTIES -->
+		<spring-boot.version>2.2.4.RELEASE</spring-boot.version>
+
+		<!-- SPRING CLOUD PROPERTIES -->
+		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+
+	</properties>
+
+	<dependencies>
+		<!-- UTILS DEPENDENCIES -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<!--//////////////////////////////// -->
+			<!-- START ABELDEVELOP DEPENDENCIES -->
+			<!--//////////////////////////////// -->
+
+			<!-- STARTERS DEPENDECIES -->
+
+			<!-- LIBRARIES DEPENDENCIES -->
+
+			<!--////////////////////////////// -->
+			<!-- END ABELDEVELOP DEPENDENCIES -->
+			<!--////////////////////////////// -->
+
+			<!-- SPRING CLOUD DEPENDENCIES -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>build-info</goal>
+							</goals>
+							<configuration>
+								<additionalProperties>
+									<parentPomVersion>${parent-pom.version}</parentPomVersion>
+								</additionalProperties>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+</project>
