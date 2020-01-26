@@ -62,7 +62,41 @@
 			<!--//////////////////////////////// -->
 
 			<!-- STARTERS DEPENDECIES -->
-
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>api-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>client-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>dto-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>model-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>repository-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>service-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.architecture.starter</groupId>
+				<artifactId>test-starter</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
 			<!-- LIBRARIES DEPENDENCIES -->
 			<dependency>
 				<groupId>com.abeldevelop.architecture.library</groupId>
