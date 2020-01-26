@@ -64,7 +64,11 @@
 			<!-- STARTERS DEPENDECIES -->
 
 			<!-- LIBRARIES DEPENDENCIES -->
-
+			<dependency>
+				<groupId>com.abeldevelop.architecture.library</groupId>
+				<artifactId>common-library</artifactId>
+				<version>${parent-pom.version}</version>
+			</dependency>
 			<!--////////////////////////////// -->
 			<!-- END ABELDEVELOP DEPENDENCIES -->
 			<!--////////////////////////////// -->
