@@ -41,6 +41,9 @@
 		<!-- SWAGGER PROPERTIES -->
 		<springfox.swagger.version>2.9.2</springfox.swagger.version>
 
+		<!-- LOGGING PROPERTIES -->
+		<logback.encoder.version>5.3</logback.encoder.version>
+
 		<!-- PLUGINS PROPERTIES -->
 		<jacoco-maven-plugin>0.8.5</jacoco-maven-plugin>
 
@@ -115,7 +118,14 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
+			
+			<!-- LOGGING DEPENDENCIES-->
+			<dependency>
+				<groupId>net.logstash.logback</groupId>
+				<artifactId>logstash-logback-encoder</artifactId>
+				<version>${logback.encoder.version}</version>
+			</dependency>
+			
 			<!-- SWAGGER DEPENDENCIES -->
 			<dependency>
 				<groupId>io.springfox</groupId>
