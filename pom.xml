@@ -47,6 +47,8 @@
 		<!-- PLUGINS PROPERTIES -->
 		<jacoco-maven-plugin>0.8.5</jacoco-maven-plugin>
 
+		<!-- JAVAX PROPERTIES -->
+		<javax.servlet.version>2.5</javax.servlet.version>
 	</properties>
 
 	<dependencies>
@@ -143,6 +145,12 @@
 				<version>${springfox.swagger.version}</version>
 			</dependency>
 
+			<!-- JAVAX DEPENDENCIES -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${javax.servlet.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
