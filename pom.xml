@@ -190,6 +190,12 @@
 					<artifactId>jacoco-maven-plugin</artifactId>
 					<version>${jacoco-maven-plugin}</version>
 					<inherited>true</inherited>
+					<configuration>
+						<excludes>
+							<exclude>com/abeldevelop/**/*MainServiceApplication.*</exclude>
+							<!-- <exclude>some/package/**/*</exclude>  exclude a package and all of its children/subpackages-->
+						</excludes>
+					</configuration>
 					<executions>
 						<execution>
 							<id>prepare-agent</id>
