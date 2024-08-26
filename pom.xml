@@ -39,7 +39,7 @@
 		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 
 		<!-- SWAGGER PROPERTIES -->
-		<springfox.swagger.version>2.9.2</springfox.swagger.version>
+		<springfox.swagger.version>2.10.0</springfox.swagger.version>
 
 		<!-- LOGGING PROPERTIES -->
 		<logback.encoder.version>5.3</logback.encoder.version>
